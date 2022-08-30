@@ -7,7 +7,7 @@ const Faq: FC = () => {
     <div className="w-screen h-screen sm:overflow-hidden">
       <Navbar />
       <div className="w-full h-full flex justify-center items-center">
-        <div className="w-[700px] h-[400px] bg-slate-700 flex flex-col items-center rounded-lg">
+        <div className="w-[700px] h-[390px] bg-slate-700 flex flex-col items-center rounded-lg">
           <h1 className="text-slate-50 font-semibold text-2xl text-center sm:text-3xl py-5">
             What makes a password strong?
           </h1>
