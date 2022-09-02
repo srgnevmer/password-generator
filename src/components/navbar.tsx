@@ -7,8 +7,8 @@ export const Navbar: FC = () => {
   };
 
   return (
-    <div className="w-full h-16 bg-slate-700 flex items-center">
-      <ul className="w-full sm:w-40 px-4 flex justify-between">
+    <div className="w-full h-16 bg-slate-700 flex justify-between items-center">
+      <ul className="w-40 pl-4 flex justify-between">
         <li>
           <NavLink
             to="/"
@@ -28,6 +28,12 @@ export const Navbar: FC = () => {
           </NavLink>
         </li>
       </ul>
+      <a
+        href="https://github.com/srgnevmer/password-generator"
+        className="text-slate-50 active:text-slate-400 lg:hover:text-slate-300 duration-300 text-2xl font-semibold pr-4"
+      >
+        GitHub
+      </a>
     </div>
   );
 };
