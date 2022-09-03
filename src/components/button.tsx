@@ -4,11 +4,13 @@ interface ButtonProps {
   width: number;
   height: number;
   text: string;
+  callback: () => void;
 }
 
-export const Button: FC<ButtonProps> = ({ width, height, text }) => {
+export const Button: FC<ButtonProps> = ({ width, height, text, callback }) => {
   return (
     <button
+      onClick={callback}
       className="bg-indigo-600 rounded-lg 
       text-xl text-white select-none
       outline outline-2 outline-transparent
