@@ -28,7 +28,7 @@ export const Range: FC = () => {
         type="range"
         min="1"
         max="50"
-        defaultValue={20}
+        defaultValue={15}
         onChange={changeLength}
         className="w-40 h-2 bg-gray-500 rounded-lg appearance-none cursor-pointer"
       />
