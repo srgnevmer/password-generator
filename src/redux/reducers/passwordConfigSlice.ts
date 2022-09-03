@@ -1,12 +1,8 @@
-import { Keys } from "../../types/index";
+import { PasswordConfig } from "../../types/";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-interface PasswordConfigState {
-  characters: Record<Keys, boolean>;
-  length: number;
-}
-
-export const initialState: PasswordConfigState = {
+export const initialState: PasswordConfig = {
+  length: 15,
   characters: {
     upperCase: true,
     lowerCase: false,
@@ -14,7 +10,6 @@ export const initialState: PasswordConfigState = {
     brackets: false,
     symbols: false,
   },
-  length: 20,
 };
 
 const passwordConfigSlice = createSlice({
@@ -22,14 +17,14 @@ const passwordConfigSlice = createSlice({
   initialState,
   reducers: {
     changeCharactersValue: (
-      state: PasswordConfigState,
+      state: PasswordConfig,
       actions: PayloadAction<[string, boolean]>
     ) => {
       const [key, value] = actions.payload;
       state.characters[key as keyof typeof initialState.characters] = value;
     },
     changeLengthValue: (
-      state: PasswordConfigState,
+      state: PasswordConfig,
       actions: PayloadAction<number>
     ) => {
       state.length = actions.payload;
