@@ -1,6 +1,6 @@
 import { FC, useEffect, useState, useRef } from "react";
 import { Navbar } from "../../components/navbar";
-import { Checkbox } from "../../components/checkbox";
+import { Checkboxes } from "../../components/checkboxes";
 import { Range } from "../../components/range";
 import { Badge } from "../../components/badge";
 import { Button } from "../../components/button";
@@ -76,13 +76,7 @@ const Home: FC = () => {
               <p className="text-slate-300 font-semibold sm:text-lg ml-2 sm:ml-7">
                 Characters used:
               </p>
-              <div className="grid grid-cols-3 sm:flex sm:w-4/6 sm:justify-around">
-                <Checkbox id="upperCase" text="ABC" />
-                <Checkbox id="lowerCase" text="abc" />
-                <Checkbox id="numbers" text="012" />
-                <Checkbox id="brackets" text="({[" />
-                <Checkbox id="symbols" text="&*~" />
-              </div>
+              <Checkboxes />
             </div>
             <div className="flex flex-col sm:flex-row justify-between mx-2 sm:mx-7 mb-5">
               <Range />
