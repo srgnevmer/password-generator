@@ -6,13 +6,14 @@ import { getNumberSelectedCheckboxes } from "../utils/checkboxes/getNumberSelect
 export const Checkboxes: FC = () => {
   const ref = useRef(null);
   const [id, setId] = useState<string | null>(null);
-  const [numberSelectedInputs, setNumberSelectedInputs] = useState<number>(0);
+  const [numberSelectedCheckboxes, setNumberSelectedCheckboxes] =
+    useState<number>(0);
 
   useEffect(() => {
     const list: HTMLDivElement = document.getElementById(
       "list"
     ) as HTMLDivElement;
-    setNumberSelectedInputs(getNumberSelectedCheckboxes(list.children));
+    setNumberSelectedCheckboxes(getNumberSelectedCheckboxes(list.children));
   });
 
   useEffect(() => {
@@ -21,7 +22,7 @@ export const Checkboxes: FC = () => {
     ) as HTMLDivElement;
     const inputs: Element[] = getInputs(list.children);
 
-    if (numberSelectedInputs === 1) {
+    if (numberSelectedCheckboxes === 1) {
       for (let index: number = 0; index < inputs.length; index += 1) {
         const target = inputs[index] as HTMLInputElement;
         if (target.checked) {
@@ -31,7 +32,7 @@ export const Checkboxes: FC = () => {
       }
     }
 
-    if (numberSelectedInputs === 2 && id !== null) {
+    if (numberSelectedCheckboxes === 2 && id !== null) {
       for (let index: number = 0; index < inputs.length; index += 1) {
         const target = inputs[index] as HTMLInputElement;
         if (target.id === id) {
@@ -40,7 +41,7 @@ export const Checkboxes: FC = () => {
         }
       }
     }
-  }, [numberSelectedInputs]);
+  }, [numberSelectedCheckboxes]);
 
   return (
     <div
