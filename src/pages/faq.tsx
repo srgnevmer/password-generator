@@ -21,7 +21,7 @@ const Faq: FC = () => {
             <li className="mb-4">
               <Accordion
                 question="Why should my password be random?"
-                answer="Random passwords are hard to guess and harder for computer programs to crack. If there's a discernible pattern, the odds of an attacker using a brute force attack and gaining access to your account goes up exponentially. Random passwords might contain a jumble of unrelated characters, but combining unrelated words also works. That's how the 1Password Strong Password Generator creates passwords that are easy to remember but still cryptographically strong."
+                answer="To prevent sophisticated hackers from getting into your accounts, you need to use a random password generator to keep your accounts safe. The password generator will create dozens of random passwords consisting of numbers, letters, and symbols that even the most skilled hackers cannot guess."
               />
             </li>
             <li className="mb-4">
