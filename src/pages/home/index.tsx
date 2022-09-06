@@ -78,14 +78,14 @@ const Home: FC = () => {
               </p>
               <Checkboxes />
             </div>
-            <div className="flex flex-col sm:flex-row justify-between mx-2 sm:mx-7 mb-5">
+            <div className="flex flex-col sm:flex-row justify-between mx-0.5 sm:mx-7 mb-5">
               <Range />
-              <div className="w-full h-12 max-w-sm flex">
+              <div className="w-full h-12 max-w-[400px] flex">
                 <div className="w-full bg-gray-500 rounded-l-lg flex justify-between items-center">
-                  <div className="ml-4 text-slate-300 font-semibol text-sm sm:text-base">
+                  <div className="ml-1 sm:ml-4 text-slate-300 font-semibol text-sm sm:text-base">
                     {modifyString(password)}
                   </div>
-                  <div>
+                  <div className="w-max">
                     <Badge />
                   </div>
                 </div>
