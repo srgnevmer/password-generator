@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .primary {
+    @apply w-14 h-14 text-4xl;
+  }
+
+  .secondary {
+    @apply w-full h-14 text-2xl;
+  }
+}
