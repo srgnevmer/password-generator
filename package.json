@@ -11,10 +11,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "flowbite": "^1.5.4",
+    "flowbite-react": "^0.3.5",
+    "lodash.debounce": "^4.0.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@types/lodash.debounce": "^4.0.7",
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
     "@vitejs/plugin-react": "^2.0.1",
