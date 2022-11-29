@@ -1,13 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { CheckboxId } from "../../types";
-
-interface CheckboxesState {
-  uppercase: boolean;
-  lowercase: boolean;
-  numbers: boolean;
-  symbols: boolean;
-  brackets: boolean;
-}
+import { CheckboxId, CheckboxesState } from "../../types";
 
 const initialState: CheckboxesState = {
   uppercase: true,
