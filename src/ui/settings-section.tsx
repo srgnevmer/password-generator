@@ -1,5 +1,6 @@
 import { FC } from "react";
 import { Checkbox, Range, Button } from "../components";
+import { PasswordLength } from "./index";
 
 export const SettingsSection: FC = () => {
   return (
@@ -22,9 +23,7 @@ export const SettingsSection: FC = () => {
           <Checkbox id="brackets" text="Brackets" />
         </div>
         <div className="w-[400px]">
-          <p className="text-2xl text-white font-semibold mb-4">
-            Password length: 20
-          </p>
+          <PasswordLength />
           <Range />
           <Button text="Copy the password" type="secondary" />
         </div>
