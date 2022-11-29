@@ -15,11 +15,11 @@ export const SettingsSection: FC = () => {
       </div>
       <div className="flex justify-around">
         <div className="w-[400px] grid grid-cols-2 grid-rows-3">
-          <Checkbox id="checkbox1" text="UPPERCASE" />
-          <Checkbox id="checkbox2" text="LOWERCASE" />
-          <Checkbox id="checkbox3" text="NUMBERS" />
-          <Checkbox id="checkbox4" text="SYMBOLS" />
-          <Checkbox id="checkbox5" text="BRACKETS" />
+          <Checkbox id="uppercase" text="Uppercase" />
+          <Checkbox id="lowercase" text="Lowercase" />
+          <Checkbox id="numbers" text="Numbers" />
+          <Checkbox id="symbols" text="Symbols" />
+          <Checkbox id="brackets" text="Brackets" />
         </div>
         <div className="w-[400px]">
           <p className="text-2xl text-white font-semibold mb-4">
