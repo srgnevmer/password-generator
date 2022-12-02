@@ -1,3 +1,5 @@
+import { CharactersToCreatePass } from "../types";
+
 export const MIN_WINDOW_WIDTH: number = 1024;
 
 export const DELAY: number = 400;
@@ -5,13 +7,13 @@ export const DELAY: number = 400;
 export const REPOSITORY_LINK: string =
   "https://github.com/srgnevmer/password-generator";
 
-export const NUMBERS: number[] = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+const NUMBERS: number[] = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-export const SYMBOLS: string[] = ["!", "?", "@", "#", "$", "%", "&"];
+const SYMBOLS: string[] = ["!", "?", "@", "#", "$", "%", "&"];
 
-export const BRACKETS: string[] = ["(", ")", "[", "]", "{", "}"];
+const BRACKETS: string[] = ["(", ")", "[", "]", "{", "}"];
 
-export const UPPERCASE: string[] = [
+const UPPERCASE: string[] = [
   "A",
   "B",
   "C",
@@ -40,7 +42,7 @@ export const UPPERCASE: string[] = [
   "Z",
 ];
 
-export const LOWERCASE: string[] = [
+const LOWERCASE: string[] = [
   "a",
   "b",
   "c",
@@ -68,3 +70,11 @@ export const LOWERCASE: string[] = [
   "y",
   "z",
 ];
+
+export const CHARACTERS_TO_CREATE_PASSWORD: CharactersToCreatePass = {
+  uppercase: UPPERCASE,
+  lowercase: LOWERCASE,
+  numbers: NUMBERS,
+  symbols: SYMBOLS,
+  brackets: BRACKETS,
+};
