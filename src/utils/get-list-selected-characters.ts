@@ -1,5 +1,5 @@
 import { CheckboxesState } from "../types";
-import { charactersToCreatePassword } from "../constants";
+import { CHARACTERS_TO_CREATE_PASSWORD } from "../constants";
 
 export const getListSelectedCharacters = (
   selectedCheckboxes: CheckboxesState
@@ -9,7 +9,7 @@ export const getListSelectedCharacters = (
   for (let [key, value] of Object.entries(selectedCheckboxes)) {
     if (value) {
       selectedCharacters.push(
-        charactersToCreatePassword[key as keyof CheckboxesState]
+        CHARACTERS_TO_CREATE_PASSWORD[key as keyof CheckboxesState]
       );
     }
   }
