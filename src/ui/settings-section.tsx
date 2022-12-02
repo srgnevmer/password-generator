@@ -10,7 +10,7 @@ export const SettingsSection: FC = () => {
     >
       <div
         className="w-full text-2xl text-white font-semibold 
-        border-b-2 border-white flex items-end mb-4"
+        border-b-2 border-white flex items-end mb-4 pb-1"
       >
         Customize your password
       </div>
