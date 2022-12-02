@@ -7,6 +7,22 @@ export const DELAY: number = 400;
 export const REPOSITORY_LINK: string =
   "https://github.com/srgnevmer/password-generator";
 
+export const VERY_WEAK: number = 4;
+
+export const WEAK: number = 7;
+
+export const GOOD: number = 9;
+
+export const STRONG: number = 11;
+
+export const VERY_STRONG: number = 12;
+
+export const MAX_LENGTH: number = 38;
+
+export const MIN_PASSWORD_LENGTH: number = 1;
+
+export const MAX_PASSWORD_LENGTH: number = 50;
+
 const NUMBERS: number[] = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 const SYMBOLS: string[] = ["!", "?", "@", "#", "$", "%", "&"];
