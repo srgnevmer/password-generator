@@ -12,3 +12,11 @@ export interface CheckboxesState {
   symbols: boolean;
   brackets: boolean;
 }
+
+export interface CharactersToCreatePass {
+  uppercase: string[];
+  lowercase: string[];
+  numbers: number[];
+  symbols: string[];
+  brackets: string[];
+}
