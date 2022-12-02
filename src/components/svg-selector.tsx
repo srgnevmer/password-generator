@@ -1,24 +1,10 @@
-import { FC, useMemo } from "react";
-import debounce from "lodash.debounce";
-import { DELAY } from "../constants";
-
-type IconId = "refresh";
+import { FC } from "react";
 
 interface SvgSelectorProps {
-  id: IconId;
+  id: "refresh";
 }
 
 export const SvgSelector: FC<SvgSelectorProps> = ({ id }) => {
-  const refresh = (): void => {
-    const target = document.getElementById("refresh")!;
-    target.classList.add("animate-refresh");
-    setTimeout(() => {
-      target.classList.remove("animate-refresh");
-    }, DELAY);
-  };
-
-  const debouncedHandler = useMemo(() => debounce(refresh, DELAY), []);
-
   switch (id) {
     case "refresh":
       return (
@@ -29,7 +15,6 @@ export const SvgSelector: FC<SvgSelectorProps> = ({ id }) => {
           viewBox="0 0 24 24"
           strokeWidth={1.5}
           stroke="currentColor"
-          onClick={debouncedHandler}
           className="w-9 h-9 text-white cursor-pointer"
         >
           <path
