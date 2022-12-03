@@ -1,7 +1,7 @@
-import { FC } from "react";
+import { FC, memo } from "react";
 import { useAppSelector } from "../redux/typed-hooks";
 
-export const PasswordLength: FC = () => {
+export const PasswordLength: FC = memo(() => {
   const passwordLength = useAppSelector<number>((state) => state.range.length);
 
   return (
@@ -9,4 +9,4 @@ export const PasswordLength: FC = () => {
       Password length: {passwordLength}
     </p>
   );
-};
+});

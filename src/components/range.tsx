@@ -1,4 +1,4 @@
-import { FC, useCallback, ChangeEvent } from "react";
+import { FC, useCallback, ChangeEvent, memo } from "react";
 import { Button } from "./index";
 import { useAppDispatch, useAppSelector } from "../redux/typed-hooks";
 import {
@@ -8,7 +8,7 @@ import {
 } from "../redux/slices/range-slice";
 import { MIN_PASSWORD_LENGTH, MAX_PASSWORD_LENGTH } from "../constants";
 
-export const Range: FC = () => {
+export const Range: FC = memo(() => {
   const dispatch = useAppDispatch();
   const passwordLength = useAppSelector<number>((state) => state.range.length);
 
@@ -40,4 +40,4 @@ export const Range: FC = () => {
       <Button text="+" type="primary" func={increment} />
     </div>
   );
-};
+});
