@@ -23,6 +23,8 @@ export const MIN_PASSWORD_LENGTH: number = 1;
 
 export const MAX_PASSWORD_LENGTH: number = 50;
 
+export const MIN_NUMBER_SELECTED_CHECKBOXES: number = 1;
+
 const NUMBERS: number[] = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 const SYMBOLS: string[] = ["!", "?", "@", "#", "$", "%", "&"];
