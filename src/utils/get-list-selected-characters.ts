@@ -6,7 +6,7 @@ export const getListSelectedCharacters = (
 ): (string[] | number[])[] => {
   const selectedCharacters: (string[] | number[])[] = [];
 
-  for (let [key, value] of Object.entries(selectedCheckboxes)) {
+  for (const [key, value] of Object.entries(selectedCheckboxes)) {
     if (value) {
       selectedCharacters.push(
         CHARACTERS_TO_CREATE_PASSWORD[key as keyof CheckboxesState]
