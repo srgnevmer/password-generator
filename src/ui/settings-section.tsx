@@ -1,8 +1,43 @@
-import { FC } from "react";
-import { Checkbox, Range, Button } from "../components";
+import { FC, useEffect } from "react";
 import { PasswordLength } from "./index";
+import { Checkbox, Range, Button } from "../components";
+import { CheckboxId, CheckboxesState } from "../types";
+import { MIN_NUMBER_SELECTED_CHECKBOXES } from "../constants";
+import { useAppDispatch, useAppSelector } from "../redux/typed-hooks";
+import { saveId } from "../redux/slices/id-last-selected-checkbox-slice";
+import { getNumberCheckboxesSelected, getIdSelectedCheckbox } from "../utils";
 
 export const SettingsSection: FC = () => {
+  const dispatch = useAppDispatch();
+  const selectedCheckboxes = useAppSelector<CheckboxesState>(
+    (state) => state.checkboxes
+  );
+  const idLastSelectedCheckbox = useAppSelector<CheckboxId | null>(
+    (state) => state.idLastSelectedCheckbox.id
+  );
+
+  useEffect(() => {
+    const quantity: number = getNumberCheckboxesSelected(selectedCheckboxes);
+
+    if (quantity === MIN_NUMBER_SELECTED_CHECKBOXES) {
+      const idSelectedCheckbox: CheckboxId =
+        getIdSelectedCheckbox(selectedCheckboxes)!;
+      dispatch(saveId(idSelectedCheckbox));
+      const target = document.getElementById(
+        idSelectedCheckbox
+      ) as HTMLInputElement;
+      target.setAttribute("disabled", "");
+    }
+
+    if (quantity > MIN_NUMBER_SELECTED_CHECKBOXES && idLastSelectedCheckbox) {
+      const target = document.getElementById(
+        idLastSelectedCheckbox
+      ) as HTMLInputElement;
+      target.removeAttribute("disabled");
+      dispatch(saveId(null));
+    }
+  }, [selectedCheckboxes]);
+
   return (
     <div
       className="w-full max-w-4xl bg-slate-700 rounded-xl
