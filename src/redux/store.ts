@@ -1,9 +1,14 @@
 import { configureStore } from "@reduxjs/toolkit";
-import checkboxesSlice from "./slices/checkboxes-slice";
 import rangeSlice from "./slices/range-slice";
+import checkboxesSlice from "./slices/checkboxes-slice";
+import idLastSelectedCheckboxSlice from "./slices/id-last-selected-checkbox-slice";
 
 export const store = configureStore({
-  reducer: { checkboxes: checkboxesSlice, range: rangeSlice },
+  reducer: {
+    range: rangeSlice,
+    checkboxes: checkboxesSlice,
+    idLastSelectedCheckbox: idLastSelectedCheckboxSlice,
+  },
 });
 
 export type RootState = ReturnType<typeof store.getState>;
