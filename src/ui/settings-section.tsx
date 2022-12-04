@@ -1,20 +1,42 @@
-import { FC, useEffect } from "react";
+import { FC, useEffect, useCallback } from "react";
 import { PasswordLength } from "./index";
 import { Checkbox, Range, Button } from "../components";
 import { CheckboxId, CheckboxesState } from "../types";
-import { MIN_NUMBER_SELECTED_CHECKBOXES } from "../constants";
+import {
+  MIN_NUMBER_SELECTED_CHECKBOXES,
+  DELAY_BEFORE_ALERT_CLOSE,
+} from "../constants";
 import { useAppDispatch, useAppSelector } from "../redux/typed-hooks";
+import { showAlert, closeAlert } from "../redux/slices/alert-slice";
 import { saveId } from "../redux/slices/id-last-selected-checkbox-slice";
 import { getNumberCheckboxesSelected, getIdSelectedCheckbox } from "../utils";
 
 export const SettingsSection: FC = () => {
   const dispatch = useAppDispatch();
+  const alertState = useAppSelector<boolean>((state) => state.alert.isActive);
+  const password = useAppSelector<string>(
+    (state) => state.password.generatedPassword
+  );
   const selectedCheckboxes = useAppSelector<CheckboxesState>(
     (state) => state.checkboxes
   );
   const idLastSelectedCheckbox = useAppSelector<CheckboxId | null>(
     (state) => state.idLastSelectedCheckbox.id
   );
+
+  const showAndCloseAlert = (): void => {
+    if (alertState) return;
+
+    dispatch(showAlert());
+    setTimeout(() => {
+      dispatch(closeAlert());
+    }, DELAY_BEFORE_ALERT_CLOSE);
+  };
+
+  const copyPassword = useCallback(() => {
+    navigator.clipboard.writeText(password);
+    showAndCloseAlert();
+  }, [alertState, password]);
 
   useEffect(() => {
     const quantity: number = getNumberCheckboxesSelected(selectedCheckboxes);
@@ -60,7 +82,11 @@ export const SettingsSection: FC = () => {
         <div className="w-[400px]">
           <PasswordLength />
           <Range />
-          <Button text="Copy the password" type="secondary" />
+          <Button
+            text="Copy the password"
+            type="secondary"
+            func={copyPassword}
+          />
         </div>
       </div>
     </div>
