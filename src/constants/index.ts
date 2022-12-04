@@ -2,8 +2,6 @@ import { CharactersToCreatePass } from "../types";
 
 export const MIN_WINDOW_WIDTH: number = 1024;
 
-export const DELAY: number = 400;
-
 export const REPOSITORY_LINK: string =
   "https://github.com/srgnevmer/password-generator";
 
@@ -24,6 +22,8 @@ export const MIN_PASSWORD_LENGTH: number = 1;
 export const MAX_PASSWORD_LENGTH: number = 50;
 
 export const MIN_NUMBER_SELECTED_CHECKBOXES: number = 1;
+
+export const DELAY_BEFORE_ALERT_CLOSE: number = 3000;
 
 const NUMBERS: number[] = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
