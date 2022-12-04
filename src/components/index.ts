@@ -1,3 +1,4 @@
+export * from "./alert";
 export * from "./badge";
 export * from "./range";
 export * from "./button";
