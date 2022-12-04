@@ -17,13 +17,15 @@ export const Range: FC = memo(() => {
     dispatch(setLength(currentValue));
   };
 
-  const decrement = useCallback((): void => {
+  const decrement = (): void => {
+    if (passwordLength === MIN_PASSWORD_LENGTH) return;
     dispatch(lengthDecrement());
-  }, []);
+  };
 
-  const increment = useCallback((): void => {
+  const increment = (): void => {
+    if (passwordLength === MAX_PASSWORD_LENGTH) return;
     dispatch(lengthIncrement());
-  }, []);
+  };
 
   return (
     <div className="w-full h-16 flex justify-center items-center mb-2">
