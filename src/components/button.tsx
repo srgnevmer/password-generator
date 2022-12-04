@@ -3,9 +3,9 @@ import { FC, memo } from "react";
 type ButtonType = "primary" | "secondary";
 
 interface ButtonProps {
-  text?: string;
+  text: string;
   type: ButtonType;
-  func?: () => void;
+  func: () => void;
 }
 
 export const Button: FC<ButtonProps> = memo(({ text, type, func }) => {
