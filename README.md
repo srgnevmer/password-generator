@@ -1,5 +1,13 @@
 # 🔐 Password generator [![CodeFactor](https://www.codefactor.io/repository/github/srgnevmer/password-generator/badge)](https://www.codefactor.io/repository/github/srgnevmer/password-generator)
 
+### Technology Stack
+
+- TypeScript
+- React
+- Redux Toolkit
+- Tailwind CSS
+- React-spring
+
 ### Description
 
 An application for generating strong and secure passwords. <br />
@@ -15,6 +23,6 @@ List of available characters:
 | symbols           | ["!", "?", "@", "#", "$", "%", "&"] |
 | brackets          | ["(", ")", "[", "]", "{", "}"]      |
 
-You can also set the length of the password, the minimum length is one character, the maximum length is fifty characters.
+The user can also set the length of the password, with a minimum of one character and a maximum of fifty characters.
 
 <!-- <img src="./src/img/preview.png" width="700" height="400"> -->
