@@ -25,4 +25,4 @@ List of available characters:
 
 The user can also set the length of the password, with a minimum of one character and a maximum of fifty characters.
 
-<!-- <img src="./src/img/preview.png" width="700" height="400"> -->
+<img src="./src/assets/preview.png" width="700" height="400">
