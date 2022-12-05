@@ -1,12 +1,18 @@
-<!-- # ⚙️ Password generator [![CodeFactor](https://www.codefactor.io/repository/github/srgnevmer/password-generator/badge/main)](https://www.codefactor.io/repository/github/srgnevmer/password-generator/overview/main)
+# 🔐 Password generator [![CodeFactor](https://www.codefactor.io/repository/github/srgnevmer/password-generator/badge)](https://www.codefactor.io/repository/github/srgnevmer/password-generator)
 
 ### Description
 
----
+An application that allows passwords to be generated.
+The user can customise which password to generate.
+For this task it can choose which characters to use to generate the password.
+List of available characters:
 
-A simple application that allows you to generate passwords.
-The user can customize the password configuration.
-By selecting any password length from 1 to 50, as well as specifying the characters he would like to use in the password.
-User can choose numbers, symbols, brackets, uppercase and lowercase letters.
+- uppercase letters [A, B, C, etc]
+- lowercase letters [a, b, c, etc]
+- numbers [1, 2, 3, etc]
+- symbols ["!", "?", "@", "#", "$", "%", "&"]
+- brackets ["(", ")", "[", "]", "{", "}"]
 
-<img src="./src/img/preview.png" width="700" height="400"> -->
+You can also set the length of the password, the minimum length is one character, the maximum length is fifty characters.
+
+<!-- <img src="./src/img/preview.png" width="700" height="400"> -->
