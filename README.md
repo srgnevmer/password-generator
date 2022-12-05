@@ -3,8 +3,8 @@
 ### Description
 
 An application that allows passwords to be generated.
-The user can customise which password to generate.
-For this task it can choose which characters to use to generate the password.
+The user can customise which password to generate. <br />
+For this task it can choose which characters to use to generate the password. <br />
 List of available characters:
 
 - uppercase letters [A, B, C, etc]
