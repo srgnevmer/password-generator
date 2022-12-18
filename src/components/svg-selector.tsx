@@ -1,6 +1,6 @@
 import { FC } from "react";
 
-type IdSvg = "refresh" | "check";
+type IdSvg = "refresh" | "check" | "plus" | "minus";
 
 interface SvgSelectorProps {
   id: IdSvg;
@@ -41,6 +41,36 @@ export const SvgSelector: FC<SvgSelectorProps> = ({ id }) => {
             strokeLinejoin="round"
             d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
           />
+        </svg>
+      );
+    case "plus":
+      return (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth={1.5}
+          stroke="currentColor"
+          className="w-8 h-8"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M12 4.5v15m7.5-7.5h-15"
+          />
+        </svg>
+      );
+    case "minus":
+      return (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth={1.5}
+          stroke="currentColor"
+          className="w-8 h-8"
+        >
+          <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 12h-15" />
         </svg>
       );
   }
