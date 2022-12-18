@@ -25,7 +25,7 @@ export const Alert: FC<AlertProps> = ({ text }) => {
         item && (
           <animated.div
             style={style}
-            className="absolute top-3 right-2 w-[305px] bg-blue-600
+            className="absolute top-3 right-2 bg-blue-600
             flex items-center px-2 py-3 rounded-lg"
           >
             <SvgSelector id="check" />
