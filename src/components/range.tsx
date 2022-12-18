@@ -1,5 +1,5 @@
-import { FC, ChangeEvent, memo } from "react";
-import { Button } from "./index";
+import { FC, ChangeEvent, memo, useMemo } from "react";
+import { IconButton, SvgSelector } from "./index";
 import { useAppDispatch, useAppSelector } from "../redux/typed-hooks";
 import {
   setLength,
@@ -27,9 +27,17 @@ export const Range: FC = memo(() => {
     dispatch(lengthIncrement());
   };
 
+  const incrementIcon = useMemo((): JSX.Element => {
+    return <SvgSelector id="plus" />;
+  }, []);
+
+  const decrementIcon = useMemo((): JSX.Element => {
+    return <SvgSelector id="minus" />;
+  }, []);
+
   return (
     <div className="w-full h-16 flex justify-center items-center mb-2">
-      <Button text="-" type="primary" func={decrement} />
+      <IconButton func={decrement} icon={decrementIcon} />
       <input
         id="range"
         type="range"
@@ -39,7 +47,7 @@ export const Range: FC = memo(() => {
         onChange={setRangeValue}
         className="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer range-lg mx-4"
       />
-      <Button text="+" type="primary" func={increment} />
+      <IconButton func={increment} icon={incrementIcon} />
     </div>
   );
 });
