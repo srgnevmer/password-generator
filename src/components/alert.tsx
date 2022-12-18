@@ -14,9 +14,9 @@ export const Alert: FC<AlertProps> = ({ text }) => {
   const alertState = useAppSelector<boolean>((state) => state.alert.isActive);
   const transition = useTransition(alertState, {
     config: config.slow,
-    from: { opacity: 0, x: 350 },
+    from: { opacity: 0, x: 0, y: -100 },
     enter: { opacity: 1, x: 0, y: 0 },
-    leave: { opacity: 0, x: 350 },
+    leave: { opacity: 0, x: 0, y: -100 },
   });
 
   return createPortal(
@@ -25,7 +25,7 @@ export const Alert: FC<AlertProps> = ({ text }) => {
         item && (
           <animated.div
             style={style}
-            className="absolute top-3 right-3 bg-blue-600
+            className="absolute top-3 right-2 w-[305px] bg-blue-600
             flex items-center px-2 py-3 rounded-lg"
           >
             <SvgSelector id="check" />
