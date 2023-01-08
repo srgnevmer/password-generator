@@ -6,7 +6,7 @@
 - React
 - Redux Toolkit
 - Tailwind CSS
-- React-spring
+- React Spring
 
 ### Description
 
